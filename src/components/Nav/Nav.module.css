@@ -1,0 +1,16 @@
+.nav__link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    color: #000;
+    transition: all 0.3s ease 0s;
+
+}
+
+.nav__link:hover,
+.nav__link:active,
+.nav__link:focus {
+    color: #CD4631;
+    transition: all 0.3s ease 0s;
+}

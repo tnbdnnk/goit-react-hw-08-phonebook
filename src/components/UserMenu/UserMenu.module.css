@@ -1,0 +1,12 @@
+.userMenu__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.userMenu__text {
+    display: flex;
+    gap: 10px;
+    font-weight: 700;
+    margin: 16px 0;
+}
