@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'reduxx/auth/operations';
+import { NavLink } from 'react-router-dom';
 
 // import css from './LogInForm.module.css';
 import css from 'cssCommonComponents/cssUtils.module.css'
@@ -58,6 +59,11 @@ export const LogInForm = () => {
             >
                 Log In{' '}
             </button>
+
+            <p className={css.form__text}>
+                Don't have an account?{' '}
+                <NavLink to='/signup' className={css.form__navlink}>Sign Up.</NavLink>
+            </p>
         </form>
     );
 };

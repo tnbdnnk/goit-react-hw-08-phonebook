@@ -3,6 +3,7 @@ import { signUp } from 'reduxx/auth/operations';
 
 // import css from './SignUpForm.module.css';
 import css from 'cssCommonComponents/cssUtils.module.css'
+import { NavLink } from "react-router-dom";
 
 export const SignUpForm = () => {
     const dispatch = useDispatch();
@@ -74,6 +75,16 @@ export const SignUpForm = () => {
             >
                 Register
             </button>
+
+            <p className={css.form__text}>
+                Already have an account?{' '}
+                <NavLink
+                    to='/login'
+                    className={css.form__navlink}
+                >
+                    Log In.
+                </NavLink>
+            </p>
         </form>
     )
 }

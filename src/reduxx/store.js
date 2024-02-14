@@ -1,7 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { contactReducer } from './contacts/contactSlice';
+import contactsReducer from './contacts/contactSlice';
 import { filterReducer } from './contacts/filterSlice';
 import { authReducer } from './auth/slice';
+import storage from 'redux-persist/lib/storage';
 import {
     persistStore,
     persistReducer,
@@ -12,9 +13,8 @@ import {
     PURGE,
     REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 
-const persistConfig = {
+const authPersistConfig = {
     key: 'auth',
     storage,
     whitelist: ['token'],
@@ -22,17 +22,40 @@ const persistConfig = {
 
 export const store = configureStore({
     reducer: {
-        auth: persistReducer(persistConfig, authReducer),
-        contacts: contactReducer,
+        contacts: contactsReducer,
         filter: filterReducer,
+        auth: persistReducer(authPersistConfig, authReducer),
     },
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
-        serializableCheck: {
-            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
+            serializableCheck: {
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+            },
         }),
     devTools: process.env.NODE_ENV === 'development',
 });
 
 export const persistor = persistStore(store);
+
+// const persistConfig = {
+//     key: 'auth',
+//     storage,
+//     whitelist: ['token'],
+// };
+
+// export const store = configureStore({
+//     reducer: {
+//         auth: persistReducer(persistConfig, authReducer),
+//         contacts: contactsReducer,
+//         filter: filterReducer,
+//     },
+//     middleware: getDefaultMiddleware =>
+//         getDefaultMiddleware({
+//         serializableCheck: {
+//             ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+//         },
+//         }),
+//     devTools: process.env.NODE_ENV === 'development',
+// });
+
+// export const persistor = persistStore(store);

@@ -1,11 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import ContactForm from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
 import ContactList from 'components/ContactsList/ContactsList';
 import { useContacts } from 'hooks/useContact';
-import { getContacts } from 'reduxx/contacts/operations';
-
+import { fetchAll } from 'reduxx/contacts/operations';
 import css from './Contacts.module.css';
 
 const Contacts = () => {
@@ -13,12 +13,13 @@ const Contacts = () => {
     const { contacts } = useContacts();
 
     useEffect(() => {
-        dispatch(getContacts());
+        dispatch(fetchAll());
     }, [dispatch]);
 
     return (
         <section className={css.contacts__section}>
-        <div className={css.contacts__wrap}>
+            <HelmetProvider>
+                <div className={css.contacts__wrap}>
             <ContactForm />
         </div>
         <div className={css.contactsList__wrap}>
@@ -32,6 +33,7 @@ const Contacts = () => {
             )}
             </div>
         </div>
+        </HelmetProvider>
         </section>
     );
 };

@@ -1,4 +1,4 @@
 export const selectIsLoggedIn = state => state.auth.isLoggedIn;
-export const selectUser = state => state.auth.user;
-export const selectRefresh = state => state.auth.isRefresh;
-export const selectError = state => state.auth.error;
+export const selectedUser = state => state.auth.user;
+export const selectIsRefreshing = state => state.auth.isRefreshing;
+// export const selectError = state => state.auth.error;

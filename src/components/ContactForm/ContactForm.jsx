@@ -1,10 +1,7 @@
 import { useDispatch } from "react-redux";
 import { addContact } from "reduxx/contacts/operations";
 import { useContacts } from "hooks/useContact";
-import Notiflix from "notiflix";
-// import { RiContactsLine } from "react-icons/ri";
-// import ContactsIcon from '@mui/icons-material/Contacts';
-// import Loader from "components/Loader/Loader";
+import Swal from "sweetalert2";
 
 import css from './ContactForm.module.css';
 import cssUtils from 'cssCommonComponents/cssUtils.module.css';
@@ -12,7 +9,6 @@ import cssUtils from 'cssCommonComponents/cssUtils.module.css';
 const ContactForm = () => {
     const dispatch = useDispatch();
     const { contacts } = useContacts();
-    // const { isLoading } = useContacts();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -21,7 +17,15 @@ const ContactForm = () => {
         const contact = { name: name.value, number: number.value };
 
         if (contacts.find(existingContact => existingContact.name.toLowerCase() === name.value.toLowerCase())) {
-            Notiflix.Notify.failure(`${contact.name} is already in your contacts.`);
+            Swal.fire({
+                title: `${contact.name}`,
+                text: 'is already in your contacts.',
+                color: '#000',
+                padding: '12px 36px 24px 36px',
+                confirmButtonColor: '#000',
+                confirmButtonText: 'OK',
+                width: '420px',
+            })
         } else {
             dispatch(addContact(contact));
         }
@@ -52,12 +56,7 @@ const ContactForm = () => {
                     className={cssUtils.form__input}
                 />
                 <button className={cssUtils.button__dark} type="submit">
-                    <span>Add contact</span>
-                    {/* {isLoading ? (
-                        <Loader color={'#ffffff'} size={'20'} />
-                    ) : (
-                            <ContactsIcon size={'20'}/>
-                    )} */}
+                    Add contact
                 </button>
             </form>
         </>
