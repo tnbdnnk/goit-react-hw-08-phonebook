@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/674.fde34bb6.chunk.css","mappings":"AAAA,6BACI,cAAe,CACf,eAAgB,CAChB,iBACJ,CAEA,4BACI,aACJ","sources":["pages/HomePage/HomePage.module.css"],"sourcesContent":[".home__title {\n    font-size: 61px;\n    font-weight: 700;\n    text-align: center;\n}\n\n.home__span {\n    color: #CD4631;\n}"],"names":[],"sourceRoot":""}
