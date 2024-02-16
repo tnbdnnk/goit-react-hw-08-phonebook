@@ -11,6 +11,7 @@
     font-size: 32px;
     font-weight: 700;
     text-align: center;
+    margin: 0 24px;
 }
 
 .home__span {
@@ -21,7 +22,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 20%; */
     margin: 24px auto;
     padding: 14px 32px;
     cursor: pointer;
@@ -34,6 +34,7 @@
     color: #F7EDE8;
     background: #000;
     box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 .home__link:hover,
@@ -44,7 +45,7 @@
 .home__img {
     position: absolute;
     left: -80px;
-    bottom: 0px;
+    bottom: 20px;
     max-width: 240px;
 }
 
@@ -53,6 +54,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .home__title {
+        font-size: 44px;
+    }
+
     .home__img {
         left: -140px;
         bottom: 0px;
@@ -63,19 +68,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        /* width: 20%; */
         margin: 32px auto;
         padding: 18px 44px;
-        /* cursor: pointer;
-        font-family: 'Montserrat Alternates', sans-serif; */
         font-weight: 500;
-        font-size: 22px;
-        /* text-decoration: none;
-        transition: all 0.3s ease 0s;
-        border-radius: 8px;
-        color: #F7EDE8;
-        background: #000;
-        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25); */
+        font-size: 20px;
     }
 
     .home__link:hover,
@@ -86,7 +82,7 @@
 
 @media screen and (min-width: 1200px) {
     .home__title {
-        font-size: 61px;
+        font-size: 68px;
         font-weight: 700;
         text-align: center;
     }
@@ -102,17 +98,17 @@
         align-items: center;
         justify-content: center;
         margin: 38px auto;
-        padding: 18px 36px;
+        padding: 18px 48px;
         cursor: pointer;
         font-family: 'Montserrat Alternates', sans-serif;
         font-weight: 500;
-        font-size: 24px;
-        text-decoration: none;
+        font-size: 26px;
+        /* text-decoration: none;
         transition: all 0.3s ease 0s;
         border-radius: 8px;
         color: #F7EDE8;
         background: #000;
-        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25); */
     }
 
     .home__link:hover,
@@ -120,11 +116,3 @@
         box-shadow: none;
     }
 }
-
-/* .home__img2 {
-    position: absolute;
-    right: 40px;
-    top: 100px;
-
-    max-width: 480px;
-} */

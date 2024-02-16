@@ -14,10 +14,10 @@ export const LogInForm = () => {
         const form = e.currentTarget;
 
         dispatch(
-        logIn({
-            email: form.elements.email.value,
-            password: form.elements.password.value,
-        })
+            logIn({
+                email: form.elements.email.value,
+                password: form.elements.password.value,
+            })
         );
 
         form.reset();
@@ -31,8 +31,9 @@ export const LogInForm = () => {
         >
             <label
                 className={css.form__label}
-                htmlFor="email">
-                    Email
+                htmlFor="email"
+            >
+                Email
             </label>
             <input
                 placeholder="Enter your email"
@@ -43,16 +44,17 @@ export const LogInForm = () => {
             />
             <label 
                 className={css.form__label}
-                htmlFor="password">
+                htmlFor="password"
+            >
                 Password
             </label>
-                    <input 
-                        placeholder="Enter your password"
-                        type="password" 
-                        name="password" 
-                        id="password" 
-                        className={css.form__input}
-                    />
+                <input 
+                    placeholder="Enter your password"
+                    type="password" 
+                    name="password" 
+                    id="password" 
+                    className={css.form__input}
+                />
             <button
                 type="submit"
                 className={css.button__dark}
@@ -62,7 +64,12 @@ export const LogInForm = () => {
 
             <p className={css.form__text}>
                 Don't have an account?{' '}
-                <NavLink to='/signup' className={css.form__navlink}>Sign Up.</NavLink>
+                <NavLink
+                    to='/signup'
+                    className={css.form__navlink}
+                >
+                    Sign Up.
+                </NavLink>
             </p>
         </form>
     );

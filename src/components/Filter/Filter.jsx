@@ -14,12 +14,12 @@ export const Filter = () => {
     };
 
     return (
-            <input
-                placeholder="Find contacts by name"
-                className={css.filter__input}
-                value={filter.filter}
-                type="search"
-                onChange={showFilteredContacts}
-            />
+        <input
+            placeholder="Find contacts by name"
+            className={css.filter__input}
+            value={filter.filter}
+            type="search"
+            onChange={showFilteredContacts}
+        />
     );
 };

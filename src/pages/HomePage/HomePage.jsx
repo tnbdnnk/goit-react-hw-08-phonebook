@@ -20,11 +20,6 @@ export default function HomePage() {
                 alt="HeroShapeSwirl"
                 className={css.home__img}
             />
-            {/* <img
-                src={`${process.env.PUBLIC_URL}/img/Vector.png`}
-                alt="HeroShapeStars"
-                className={css.home__img2}
-            /> */}
         </div>
     );
 }
