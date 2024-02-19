@@ -21,6 +21,7 @@
 }
 
 .contacts__title {
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 28px;
     font-weight: 600;
     margin-top: 0;
@@ -40,6 +41,7 @@
 }
 
 .contacts__message {
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 30px;
     font-weight: 400;
     margin: 0;
