@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'reduxx/auth/operations';
 import { NavLink } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-// import css from './LogInForm.module.css';
 import css from 'cssCommonComponents/cssUtils.module.css'
 
 export const LogInForm = () => {
@@ -18,9 +18,31 @@ export const LogInForm = () => {
                 email: form.elements.email.value,
                 password: form.elements.password.value,
             })
-        );
-
-        form.reset();
+        ).then(action => {
+            if (action.type === 'auth/login/rejected') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Invalid email or password. Please try again.',
+                    color: '#000',
+                    padding: '12px 36px 24px 36px',
+                    confirmButtonColor: '#000',
+                    confirmButtonText: 'OK',
+                    width: '420px',
+                });
+            } else if (action.type === 'auth/login/fulfilled') {
+                Swal.fire({
+                    icon: 'success',
+                    text: 'Logged in successfully!',
+                    color: '#000',
+                    padding: '12px 36px 24px 36px',
+                    confirmButtonColor: '#000',
+                    confirmButtonText: 'OK',
+                    width: '420px',
+                });
+                form.reset();
+            }
+        })
     };
 
     return (

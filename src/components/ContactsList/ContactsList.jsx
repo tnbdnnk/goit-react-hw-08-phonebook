@@ -31,7 +31,7 @@ const ContactList = () => {
                 dispatch(deleteContact(id));
                 Swal.fire({
                     title: 'Deleted!',
-                    text: 'Your file has been deleted.',
+                    text: 'Your contact has been deleted.',
                     color: '#000',
                     confirmButtonColor: '#000',
                     width: '420px',

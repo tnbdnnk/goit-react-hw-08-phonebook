@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
 import { signUp } from 'reduxx/auth/operations';
-
-// import css from './SignUpForm.module.css';
-import css from 'cssCommonComponents/cssUtils.module.css'
 import { NavLink } from "react-router-dom";
+import Swal from "sweetalert2";
+
+import css from 'cssCommonComponents/cssUtils.module.css'
 
 export const SignUpForm = () => {
     const dispatch = useDispatch();
@@ -19,9 +19,32 @@ export const SignUpForm = () => {
                 email: form.elements.email.value,
                 password: form.elements.password.value,
             })
-        );
-
-        form.reset();
+        ).then(action => {
+            console.log(action.type)
+            if (action.type === 'auth/signup/rejected') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'An account with that email adress already exist. Please, enter another or try to log in.',
+                    color: '#000',
+                    padding: '12px 36px 24px 36px',
+                    confirmButtonColor: '#000',
+                    confirmButtonText: 'OK',
+                    width: '420px',
+                });
+            } else if (action.type === 'auth/signup/fulfilled') {
+                Swal.fire({
+                    icon: 'success',
+                    text: 'Successfully registered. Enjoy!',
+                    color: '#000',
+                    padding: '12px 36px 24px 36px',
+                    confirmButtonColor: '#000',
+                    confirmButtonText: 'OK',
+                    width: '420px',
+                });
+                form.reset();
+            }
+        })
     }
     
     return (
