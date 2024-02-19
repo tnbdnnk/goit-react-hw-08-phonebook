@@ -20,20 +20,20 @@ const Contacts = () => {
         <section className={css.contacts__section}>
             <HelmetProvider>
                 <div className={css.contacts__wrap}>
-            <ContactForm />
-        </div>
-        <div className={css.contactsList__wrap}>
-            <h2 className={css.contacts__title}>Contacts</h2>
-            <div className={css.contacts__wrapper}>
-            <Filter />
-            {contacts.length > 0 ? (
-                <ContactList />
-            ) : (
-                <p className={css.contacts__message}>Add your first contact</p>
-            )}
-            </div>
-        </div>
-        </HelmetProvider>
+                    <ContactForm />
+                </div>
+                <div className={css.contactsList__wrap}>
+                    <h2 className={css.contacts__title}>Contacts</h2>
+                    <div className={css.contacts__wrapper}>
+                        <Filter />
+                        {contacts.length > 0 ? (
+                            <ContactList />
+                        ) : (
+                            <p className={css.contacts__message}>Add your first contact</p>
+                        )}
+                    </div>
+                </div>
+            </HelmetProvider>
         </section>
     );
 };

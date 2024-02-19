@@ -33,11 +33,11 @@ const ContactForm = () => {
     }
 
     return (
-        <>
+        <div className={css.contactForm__wrap}>
             <h2 className={css.contactForm__title}>Phonebook</h2>
             <form
                 onSubmit={handleSubmit}
-                className={cssUtils.form}
+                className={css.contactForm}
             >
                 <input
                     type="text"
@@ -45,7 +45,7 @@ const ContactForm = () => {
                     title="Name may contain only letters, apostrophe, dash and spaces."
                     required
                     placeholder="Name"
-                    className={cssUtils.form__input}
+                    className={css.contactForm__input}
                 />
                 <input
                     type="tel"
@@ -53,13 +53,13 @@ const ContactForm = () => {
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required
                     placeholder="Phone"
-                    className={cssUtils.form__input}
+                    className={css.contactForm__input}
                 />
                 <button className={cssUtils.button__dark} type="submit">
                     Add contact
                 </button>
             </form>
-        </>
+        </div>
     );
 }
 

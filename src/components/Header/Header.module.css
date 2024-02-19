@@ -1,6 +1,6 @@
 .header {
     display: block;
-    margin-bottom: 14px;
+    margin: 28px 0;
 }
 
 .header .container {
@@ -10,9 +10,41 @@
 
 .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
     align-items: center;
-    margin: 0 auto ;
-    padding: 14px;
-    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 14px;
+    /* max-width: 960px; */
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    .header .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto ;
+        padding: 14px 22px;
+        max-width: 840px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1023) {
+    .container{
+        font-size: 18px;
+    }
+    
 }

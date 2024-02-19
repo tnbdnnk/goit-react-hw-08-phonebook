@@ -40,6 +40,7 @@ export const SignUpForm = () => {
                 type="text" 
                 name="name" 
                 id="name"
+                placeholder="Enter your username"
                 className={css.form__input}
             />
             
@@ -53,6 +54,7 @@ export const SignUpForm = () => {
                 type="email" 
                 name="email" 
                 id="email"
+                placeholder="Enter your email"
                 className={css.form__input}
             />
             
@@ -66,6 +68,7 @@ export const SignUpForm = () => {
                 type="password" 
                 name="password" 
                 id="password"
+                placeholder="Create a password"
                 className={css.form__input}
             />
             

@@ -42,7 +42,7 @@ const ContactList = () => {
     }
 
     return (
-        <>
+        <div>
             <SortingButtons />
             {isLoading ? (
                 <span>
@@ -77,7 +77,7 @@ const ContactList = () => {
                         })}
                 </ul>
             )}
-        </>
+        </div>
     )
 }
 

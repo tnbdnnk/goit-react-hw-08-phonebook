@@ -3,7 +3,6 @@ import { logOut } from "reduxx/auth/operations";
 import { useAuth } from "hooks";
 
 import css from './UserMenu.module.css';
-import cssUtils from 'cssCommonComponents/cssUtils.module.css';
 
 export const UserMenu = () => {
     const dispatch = useDispatch();
@@ -17,7 +16,7 @@ export const UserMenu = () => {
             <button
                 type="button"
                 onClick={() => dispatch(logOut())}
-                className={cssUtils.button__light}
+                className={css.button__light}
             >
                 Log Out
             </button>

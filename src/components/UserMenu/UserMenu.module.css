@@ -1,12 +1,62 @@
 .userMenu__wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 22px;
+    /* gap: 22px; */
 }
 
 .userMenu__text {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
     font-weight: 700;
     margin: 16px 0;
+}
+
+.button__light {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 8px 30px;
+    cursor: pointer;
+    color: #000;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    transition: all 0.3s ease 0s;
+    border-radius: 8px;
+    border: 2px solid #000;
+    background: #ffffff;
+    box-shadow: 2px 2px 0px 0px #CD4631;
+}
+
+.button__light:hover,
+.button__light:focus {
+    box-shadow: none;
+}
+
+
+
+@media screen and (min-width: 760px) {
+    .userMenu__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .userMenu__text {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        font-weight: 700;
+        margin: 16px 0;
+    }
+
+    .button__light {
+        font-size: 14px;
+        margin-right: 12px;
+    }
 }

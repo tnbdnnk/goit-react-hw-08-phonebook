@@ -15,7 +15,7 @@ export const Filter = () => {
 
     return (
         <input
-            placeholder="Find contacts by name"
+            placeholder="Find contacts"
             className={css.filter__input}
             value={filter.filter}
             type="search"

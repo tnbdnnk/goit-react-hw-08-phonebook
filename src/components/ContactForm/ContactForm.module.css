@@ -1,7 +1,93 @@
+.contactForm__wrap {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .contactForm__title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 600;
     /* text-transform: uppercase; */
-    /* margin: 0 auto; */
-    margin-bottom: 24px;
+    margin: 0 auto;
+    margin-bottom: 14px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    /* margin: 0 20px; */
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    background: #FFF;    
+    margin-bottom: 35px;
+    box-shadow: 6px 6px 0px 0px #81ADC8;
+}
+
+.contactForm__input {
+    display: block;
+    /* margin: 0 18px 20px 18px; */
+    margin-bottom: 18px;
+    padding: 12px 20px;
+    outline: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    border-radius: 8px;
+    border: 1.5px solid #000;
+    transition: all 0.3s ease 0s;
+}
+
+.contactForm__input:hover,
+.contactForm__input:focus {
+    transition: all 0.3s ease 0s;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+    .contactForm__title {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .contactForm {
+        display: flex;
+        flex-direction: column;
+        width: 420px;
+        margin: 0 auto;
+        padding: 36px 26px;
+
+        border-radius: 12px;
+        border: 2px solid #000;
+        background: #FFF;    
+        margin-bottom: 35px;
+        box-shadow: 6px 6px 0px 0px #81ADC8;
+    }
+
+    .contactForm__label {
+        margin: 0 22px 12px 22px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .contactForm__input {
+        display: block;
+        margin: 0 20px 22px 20px;
+        padding: 12px 22px;
+        outline: 0;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 18px;
+        color: #000000;
+        border-radius: 8px;
+        border: 1.5px solid #000;
+        transition: all 0.3s ease 0s;
+    }
+
+    .contactForm__input:hover,
+    .contactForm__input:focus {
+        transition: all 0.3s ease 0s;
+        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    }
 }

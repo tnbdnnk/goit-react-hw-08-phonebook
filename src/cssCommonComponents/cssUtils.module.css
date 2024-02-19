@@ -1,38 +1,14 @@
-.button__light {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45%;
-    margin: 0 auto;
-    padding: 10px 30px;
-    cursor: pointer;
-    color: #000;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    transition: all 0.3s ease 0s;
-    border-radius: 8px;
-    border: 2px solid #000;
-    background: #ffffff;
-    box-shadow: 2px 2px 0px 0px #CD4631;
-}
-
-.button__light:hover,
-.button__light:focus {
-    box-shadow: none;
-}
-
 .button__dark {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    /* width: 50%; */
     margin: 0 auto;
-    padding: 10px 22px;
+    padding: 10px 32px;
     cursor: pointer;
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     transition: all 0.3s ease 0s;
     border-radius: 8px;
     color: #fff;
@@ -60,6 +36,7 @@
 
 .form__label {
     margin: 0 20px 8px 20px;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 13px;
     font-weight: 500;
 }
@@ -67,7 +44,7 @@
 .form__input {
     display: block;
     margin: 0 18px 20px 18px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     outline: 0;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 14px;
@@ -85,16 +62,16 @@
 
 .form__text {
     font-weight: 400;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 12px;
     margin: 18px auto 0 auto;
 }
 
 .form__navlink {
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     color: #000;
     transition: all 0.3s ease 0s;
-
 }
 
 .form__navlink:hover {
@@ -106,7 +83,6 @@
     .form {
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         width: 420px;
         margin: 0 auto;
         padding: 36px 26px;
@@ -147,9 +123,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 60%;
+        width: 50%;
         margin: 0 auto;
-        padding: 10px 48px;
+        padding: 12px 0;
         cursor: pointer;
         font-family: 'Montserrat Alternates', sans-serif;
         font-weight: 500;
@@ -165,69 +141,32 @@
     .button__dark:focus {
         box-shadow: none;
     }
-}
 
-@media screen and (min-width: 1200px) {
-    .form {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        width: 420px;
-        margin: 0 auto;
-        padding: 36px 26px;
-
-        border-radius: 12px;
-        border: 2px solid #000;
-        background: #FFF;    
-        margin-bottom: 35px;
-        box-shadow: 6px 6px 0px 0px #81ADC8;
-    }
-
-    .form__label {
-        margin: 0 22px 12px 22px;
-        font-size: 16px;
-        font-weight: 500;
-    }
-
-    .form__input {
-        display: block;
-        margin: 0 20px 22px 20px;
-        padding: 12px 22px;
-        outline: 0;
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-size: 18px;
-        color: #000000;
-        border-radius: 8px;
-        border: 1.5px solid #000;
-        transition: all 0.3s ease 0s;
-    }
-
-    .form__input:hover,
-    .form__input:focus {
-        transition: all 0.3s ease 0s;
-        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    .button__dark {
+    .button__light {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 60%;
+        width: 45%;
         margin: 0 auto;
-        padding: 10px 48px;
+        padding: 10px 30px;
         cursor: pointer;
+        color: #000;
         font-family: 'Montserrat Alternates', sans-serif;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 14px;
         transition: all 0.3s ease 0s;
         border-radius: 8px;
-        color: #F7EDE8;
-        background: #000;
-        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+        border: 2px solid #000;
+        background: #ffffff;
+        box-shadow: 2px 2px 0px 0px #CD4631;
     }
 
-    .button__dark:hover,
-    .button__dark:focus {
+    .button__light:hover,
+    .button__light:focus {
         box-shadow: none;
+    }
+
+    .form__text{
+        font-size: 14px;
     }
 }
